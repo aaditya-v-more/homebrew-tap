@@ -1,32 +1,32 @@
-# Homebrew tap for claude-ollama
+# aaditya-v-more/tap
 
-    brew install aaditya-v-more/claude-ollama/claude-ollama
-    claude-ollama install-app
+A Homebrew tap for my own tools.
 
-[claude-ollama](https://github.com/aaditya-v-more/claude-ollama) runs Claude
-Desktop against a local Ollama gateway: environment overrides for the retry,
-concurrency and context-window settings a small self-hosted endpoint needs,
-plus a pacing proxy that keeps in-flight requests under the gateway's limit and
-repairs the context windows and the double-slashed model URL it reports.
+    brew tap aaditya-v-more/tap
 
-Homebrew asks you to trust the formula the first time, because a tap can run
-code of its own at install time and this one is not an official Homebrew tap.
-Answer it once and it is remembered by name.
-`brew trust --tap aaditya-v-more/claude-ollama` covers anything else added here
-later.
+Or name it inline and skip the tap step:
 
-## What the formula runs at install time
+    brew install aaditya-v-more/tap/<name>
 
-`Tools/make-app.sh`, from the source tarball, which assembles
-`Claude (Ollama).app` inside the keg — an `Info.plist`, an icon and a shell
-script that calls `claude-ollama run`. It is a Dock icon with no logic of its
-own, and it is built rather than shipped so the path to the installed wrapper
-can be baked into it.
+## What's here
 
-Nothing is written outside the keg. `claude-ollama install-app` is what links
-the bundle into `~/Applications`, and it is left for you to run.
+| | |
+| --- | --- |
+| [claude-ollama](https://github.com/aaditya-v-more/claude-ollama) | Runs Claude Desktop against a local Ollama gateway — environment overrides for the retry, concurrency and context-window settings a small self-hosted endpoint needs, plus a pacing proxy that keeps in-flight requests under the gateway's limit. |
 
-## Everything else
+Each entry is built from its own repository; this one holds only the formulae
+and casks. Bugs and feature requests belong on the source repository, anything
+about the packaging itself here.
 
-The tuning, the proxy's flags, verification and uninstall are documented in the
-[source repository](https://github.com/aaditya-v-more/claude-ollama).
+## Trust
+
+Homebrew asks you to trust a tap the first time you install from it, because a
+tap can run code of its own at install time and this is not an official
+Homebrew tap. Answering once covers this tap by name, including anything added
+to it later; `brew trust --tap aaditya-v-more/tap` does the same up front.
+
+What runs at install time is visible in the formula files here. At the moment
+that is one line: `claude-ollama` builds its `Claude (Ollama).app` launcher
+inside the keg, so the path to the installed wrapper can be baked into it.
+Nothing is written outside the keg — linking that bundle into `~/Applications`
+is a separate command you run yourself.

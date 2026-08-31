@@ -8,7 +8,7 @@ cask "claude-ollama" do
   desc "Runs Claude Desktop against a local Ollama gateway, paced and untouched"
   homepage "https://github.com/aaditya-v-more/claude-ollama"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   # The app is a launcher with no logic of its own: a Dock icon that calls
   # claude-ollama. Installing it as an app rather than leaving it in the keg is

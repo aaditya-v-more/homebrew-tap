@@ -18,11 +18,12 @@ cask "claude-ollama" do
   binary "bin/claude-ollama-pace"
 
   # Homebrew quarantines everything it downloads and, since Homebrew 6, offers
-  # no way to ask it not to. This bundle is a shell script and an icon with no
-  # signature at all, so macOS refuses a quarantined copy outright and every
-  # user would otherwise have to clear the attribute by hand before the first
-  # launch. This is the same thing they would type, done once at install time
-  # and visible here, under the trust `brew trust` already asked for.
+  # no way to ask it not to. This bundle is ad-hoc signed rather than notarised
+  # — notarising means a paid Apple developer account — and macOS refuses a
+  # quarantined app that is not notarised, so every user would otherwise have to
+  # clear the attribute by hand before the first launch. This is the same thing
+  # they would type, done once at install time and visible here, under the trust
+  # `brew trust` already asked for.
   postflight do
     system_command "/usr/bin/xattr",
                    args:         ["-dr", "com.apple.quarantine", "#{appdir}/Claude (Ollama).app"],
@@ -49,8 +50,8 @@ cask "claude-ollama" do
     Opened from the app rather than the terminal, it also puts an item in the
     menu bar with the proxy's port, load and pushback while Claude is running.
 
-    The bundle is a shell script and an icon with no Apple signature, so this
-    cask clears the quarantine attribute Homebrew sets on its download. Nothing
-    else about it changes.
+    The app is ad-hoc signed rather than notarised, so this cask clears the
+    quarantine attribute Homebrew sets on its download. Nothing about its
+    signing changes: `spctl` still rejects it.
   EOS
 end

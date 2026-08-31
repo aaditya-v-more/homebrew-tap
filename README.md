@@ -27,7 +27,7 @@ to it later; `brew trust --tap aaditya-v-more/tap` does the same up front.
 
 What runs at install time is visible in the files here. At the moment that is
 one line: `claude-ollama` clears the quarantine attribute from the app Homebrew
-just downloaded. Its bundle is a shell script and an icon with no Apple
-signature, and macOS refuses to open a quarantined app that is not notarised,
-so without that every install would end with the user typing `xattr -dr` by
-hand. Nothing about the app's signing changes.
+just downloaded. That app is ad-hoc signed rather than notarised, and macOS
+refuses to open a quarantined app that is not notarised, so without it every
+install would end with the user typing `xattr -dr` by hand. Nothing about the
+app's signing changes.

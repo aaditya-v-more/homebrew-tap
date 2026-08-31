@@ -1,6 +1,6 @@
 cask "claude-ollama" do
-  version "1.1.1"
-  sha256 "f7b79f1e784c4159395e0c79829898fa458fa8fdb3fa7f75649b41b93b6a7d39"
+  version "1.2.0"
+  sha256 "d1e5d125dee01e315109bf216569e632b356242e8ea2fba792b74020fca8479f"
 
   url "https://github.com/aaditya-v-more/claude-ollama/releases/download/v#{version}/ClaudeOllama-#{version}.zip",
       verified: "github.com/aaditya-v-more/claude-ollama/"
@@ -10,9 +10,9 @@ cask "claude-ollama" do
 
   depends_on macos: :big_sur
 
-  # The app is a launcher with no logic of its own: a Dock icon that calls
-  # claude-ollama. Installing it as an app rather than leaving it in the keg is
-  # the point — it has to be somewhere Launchpad and Spotlight will find it.
+  # The app starts Claude and then stays in the menu bar showing what the proxy
+  # is doing. Installing it as an app rather than leaving it in the keg is the
+  # point — it has to be somewhere Launchpad and Spotlight will find it.
   app "Claude (Ollama).app"
   binary "bin/claude-ollama"
   binary "bin/claude-ollama-pace"
@@ -34,6 +34,7 @@ cask "claude-ollama" do
   zap trash: [
     "~/.config/claude-ollama",
     "~/.local/state/claude-ollama-pace.log",
+    "~/.local/state/claude-ollama-pace.port",
   ]
 
   caveats <<~EOS
@@ -42,7 +43,11 @@ cask "claude-ollama" do
     127.0.0.1:11435 — it installs neither.
 
       claude-ollama doctor          check both, and everything in between
+      claude-ollama status          what the proxy is doing right now
       claude-ollama config --init   write a settings file the app reads too
+
+    Opened from the app rather than the terminal, it also puts an item in the
+    menu bar with the proxy's port, load and pushback while Claude is running.
 
     The bundle is a shell script and an icon with no Apple signature, so this
     cask clears the quarantine attribute Homebrew sets on its download. Nothing

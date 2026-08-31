@@ -1,5 +1,7 @@
 # aaditya-v-more/tap
 
+[![Support this on Ko-fi](https://img.shields.io/badge/Ko--fi-support%20this-FF5E5B?logo=kofi&logoColor=white)](https://ko-fi.com/aadityavmore)
+
 A Homebrew tap for my own tools.
 
     brew tap aaditya-v-more/tap
@@ -31,3 +33,8 @@ just downloaded. That app is ad-hoc signed rather than notarised, and macOS
 refuses to open a quarantined app that is not notarised, so without it every
 install would end with the user typing `xattr -dr` by hand. Nothing about the
 app's signing changes.
+
+## Supporting it
+
+Everything here is free and staying that way. If it saved you the trouble,
+there's a [tip jar](https://ko-fi.com/aadityavmore).

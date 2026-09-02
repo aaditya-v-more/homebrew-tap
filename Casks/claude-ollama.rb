@@ -1,6 +1,6 @@
 cask "claude-ollama" do
-  version "1.2.1"
-  sha256 "5cbbdf5c4e499c2970500746bdc28487a2b4b934ab2ff07d227a2266808dfe4a"
+  version "1.3.0"
+  sha256 "c3a76cb419ababadb6ad3cdeda1e4c61b852f587ce51086f78059eb0d5c20b0a"
 
   url "https://github.com/aaditya-v-more/claude-ollama/releases/download/v#{version}/ClaudeOllama-#{version}.zip",
       verified: "github.com/aaditya-v-more/claude-ollama/"

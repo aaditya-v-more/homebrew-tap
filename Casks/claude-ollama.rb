@@ -38,12 +38,15 @@ cask "claude-ollama" do
         must_succeed: false
   end
 
-  # The settings file and the proxy's log. Not the Claude-3p profile: that is
-  # Claude Desktop's own folder and holds the chats, so nothing here touches it.
+  # App settings, proxy logs, caches and preferences. Not the Claude-3p profile:
+  # that is Claude Desktop's own folder and holds the chats, so nothing here touches it.
   zap trash: [
     "~/.config/claude-ollama",
     "~/.local/state/claude-ollama-pace.log",
     "~/.local/state/claude-ollama-pace.port",
+    "~/Library/Caches/local.aaditya.claude-ollama-launcher",
+    "~/Library/HTTPStorages/local.aaditya.claude-ollama-launcher",
+    "~/Library/Preferences/local.aaditya.claude-ollama-launcher.plist",
   ]
 
   caveats <<~EOS

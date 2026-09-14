@@ -2,8 +2,7 @@ cask "claude-ollama" do
   version "1.3.0"
   sha256 "c3a76cb419ababadb6ad3cdeda1e4c61b852f587ce51086f78059eb0d5c20b0a"
 
-  url "https://github.com/aaditya-v-more/claude-ollama/releases/download/v#{version}/ClaudeOllama-#{version}.zip",
-      verified: "github.com/aaditya-v-more/claude-ollama/"
+  url "https://github.com/aaditya-v-more/claude-ollama/releases/download/v#{version}/ClaudeOllama-#{version}.zip"
   name "Claude (Ollama)"
   desc "Runs Claude Desktop against a local Ollama gateway, paced and untouched"
   homepage "https://github.com/aaditya-v-more/claude-ollama"
@@ -14,7 +13,6 @@ cask "claude-ollama" do
   # `brew upgrade --cask --greedy claude-ollama` still works for anyone who
   # would rather Homebrew did it.
   auto_updates true
-
   depends_on macos: :big_sur
 
   # The app starts Claude and then stays in the menu bar showing what the proxy
@@ -34,10 +32,10 @@ cask "claude-ollama" do
   # clear the attribute by hand before the first launch. This is the same thing
   # they would type, done once at install time and visible here, under the trust
   # `brew trust` already asked for.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args:         ["-dr", "com.apple.quarantine", "#{appdir}/Claude (Ollama).app"],
-                   must_succeed: false
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:         ["-dr", "com.apple.quarantine", "{{appdir}}/Claude (Ollama).app"],
+        must_succeed: false
   end
 
   # The settings file and the proxy's log. Not the Claude-3p profile: that is

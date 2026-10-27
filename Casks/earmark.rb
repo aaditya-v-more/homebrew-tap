@@ -22,7 +22,6 @@ cask "earmark" do
 
   # Unpacked books, plugin settings, and the reading position in each book.
   zap trash: [
-    "~/Documents/Earmark",
     "~/Library/Application Support/Earmark",
     "~/Library/Caches/Earmark",
     "~/Library/Preferences/com.aadityavmore.earmark.plist",

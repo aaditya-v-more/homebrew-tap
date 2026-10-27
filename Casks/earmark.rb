@@ -1,6 +1,6 @@
 cask "earmark" do
-  version "0.4.2"
-  sha256 "11604fdba7a73a48a5d843c8acbf20255a38b0634aa7ae71dbea736fdcac91c5"
+  version "0.5.0"
+  sha256 "b3e79291cc4ea2fe966f35157247fa8564ce697f9a6a66ccfe5bf01a5c72c91b"
 
   url "https://github.com/aaditya-v-more/earmark/releases/download/v#{version}/Earmark.zip"
   name "Earmark"
@@ -23,6 +23,7 @@ cask "earmark" do
   # Unpacked books, plugin settings, and the reading position in each book.
   zap trash: [
     "~/Library/Application Support/Earmark",
+    "~/Documents/Earmark",
     "~/Library/Caches/Earmark",
     "~/Library/Preferences/com.aadityavmore.earmark.plist",
   ]

@@ -15,7 +15,7 @@ Or name it inline and skip the tap step:
 | | |
 | --- | --- |
 | [claude-ollama](https://github.com/aaditya-v-more/claude-ollama) (cask) | Runs Claude Desktop against a local Ollama gateway — environment overrides for the retry, concurrency and context-window settings a small self-hosted endpoint needs, plus a pacing proxy that keeps in-flight requests under the gateway's limit. |
-| [earmark](https://github.com/aaditya-v-more/earmark) (cask) | A small EPUB reader that reads books aloud, highlighting the sentence and the word being spoken. Works with system voices and plugin TTS engines. |
+| [earmark](https://github.com/aaditya-v-more/earmark) (cask) | A small reader for EPUB, PDF and text that reads books aloud, highlighting the sentence and the word being spoken. Works with system voices and plugin TTS engines. |
 
 Each entry is built from its own repository; this one holds only the formulae
 and casks. Bugs and feature requests belong on the source repository, anything

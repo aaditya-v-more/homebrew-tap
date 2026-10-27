@@ -1,10 +1,10 @@
 cask "earmark" do
-  version "0.2.1"
-  sha256 "2733a819670020864aba45d9fab07f2c708439c8de6a5211bc2ee76b8daca62f"
+  version "0.3.0"
+  sha256 "1cb4a3d12b892da5f2f94d1cb681b38a52a21e83a37c5d1ce502d599e3e0bbdf"
 
   url "https://github.com/aaditya-v-more/earmark/releases/download/v#{version}/Earmark.zip"
   name "Earmark"
-  desc "Reads EPUBs aloud, highlighting each sentence and word"
+  desc "Reads EPUB, PDF and text books aloud, highlighting each sentence and word"
   homepage "https://github.com/aaditya-v-more/earmark"
 
   depends_on macos: :sonoma

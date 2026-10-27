@@ -1,6 +1,6 @@
 cask "earmark" do
-  version "0.6.0"
-  sha256 "288b218b4720702bc3323b3321e731d147d45a39e9583b16644f285179742795"
+  version "0.6.1"
+  sha256 "572f617f4c3361f623b6e636ab54547a90bdd7ec8c8cbc3b3baa0e71225c85be"
 
   url "https://github.com/aaditya-v-more/earmark/releases/download/v#{version}/Earmark.zip"
   name "Earmark"

@@ -15,6 +15,7 @@ Or name it inline and skip the tap step:
 | | |
 | --- | --- |
 | [claude-ollama](https://github.com/aaditya-v-more/claude-ollama) (cask) | Runs Claude Desktop against a local Ollama gateway — environment overrides for the retry, concurrency and context-window settings a small self-hosted endpoint needs, plus a pacing proxy that keeps in-flight requests under the gateway's limit. |
+| [earmark](https://github.com/aaditya-v-more/earmark) (cask) | A small EPUB reader that reads books aloud, highlighting the sentence and the word being spoken. Works with system voices and plugin TTS engines. |
 
 Each entry is built from its own repository; this one holds only the formulae
 and casks. Bugs and feature requests belong on the source repository, anything
@@ -28,8 +29,9 @@ Homebrew tap. Answering once covers this tap by name, including anything added
 to it later; `brew trust --tap aaditya-v-more/tap` does the same up front.
 
 What runs at install time is visible in the files here. At the moment that is
-one line: `claude-ollama` clears the quarantine attribute from the app Homebrew
-just downloaded. That app is ad-hoc signed rather than notarised, and macOS
+one line per cask: `claude-ollama` and `earmark` each clear the quarantine
+attribute from the app Homebrew just downloaded. Those apps are ad-hoc signed
+rather than notarised, and macOS
 refuses to open a quarantined app that is not notarised, so without it every
 install would end with the user typing `xattr -dr` by hand. Nothing about the
 app's signing changes.

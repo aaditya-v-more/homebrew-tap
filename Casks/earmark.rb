@@ -20,10 +20,12 @@ cask "earmark" do
         must_succeed: false
   end
 
-  # Unpacked books, plugin settings, and the reading position in each book.
+  # Unpacked books, plugin settings, the reading position in each book, and the
+  # cookies and other HTTP state macOS keeps for the app.
   zap trash: [
     "~/Library/Application Support/Earmark",
     "~/Library/Caches/Earmark",
+    "~/Library/HTTPStorages/com.aadityavmore.earmark",
     "~/Library/Preferences/com.aadityavmore.earmark.plist",
   ]
 end

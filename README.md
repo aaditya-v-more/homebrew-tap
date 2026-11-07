@@ -15,12 +15,13 @@ Or name it inline and skip the tap step:
 | | |
 | --- | --- |
 | [claude-ollama](https://github.com/aaditya-v-more/claude-ollama) (cask) | Runs Claude Desktop against a local Ollama gateway — environment overrides for the retry, concurrency and context-window settings a small self-hosted endpoint needs, plus a pacing proxy that keeps in-flight requests under the gateway's limit. |
-| [earmark](https://github.com/aaditya-v-more/earmark) (cask) | A small reader for EPUB, PDF and text that reads books aloud, highlighting the sentence and the word being spoken. Works with system voices and plugin TTS engines. |
+| [earmark](https://tinkerfold.com/#earmark) (cask) | A small reader for EPUB, PDF and text that reads books aloud, highlighting the sentence and the word being spoken. Works with system voices and plugin TTS engines. |
 | [google-tts-local](https://github.com/aaditya-v-more/google-tts-local) (formula) | Runs Google's on-device text-to-speech voices locally on Apple Silicon, with a CLI and optional HTTP server. |
+| [lingveil](https://tinkerfold.com/#lingveil) (cask) | Translates what's on screen in place: labels, messages and paragraphs are repainted in your language in the same spot, with the app's own colors and type. Uses Google with no key, local models or Apple's built-in translation. |
 
 Each entry is built from its own repository; this one holds only the formulae
-and casks. Bugs and feature requests belong on the source repository, anything
-about the packaging itself here.
+and casks. Earmark and Lingveil are downloaded from tinkerfold.com. Anything
+about the packaging itself belongs here.
 
 ## Trust
 
@@ -30,11 +31,11 @@ Homebrew tap. Answering once covers this tap by name, including anything added
 to it later; `brew trust --tap aaditya-v-more/tap` does the same up front.
 
 What runs at install time is visible in the files here. For the casks that is
-one line each: `claude-ollama` and `earmark` each clear the quarantine
-attribute from the app Homebrew just downloaded. Those apps are ad-hoc signed
-rather than notarised, and macOS
-refuses to open a quarantined app that is not notarised, so without it every
-install would end with the user typing `xattr -dr` by hand. Nothing about the
+one line each: `claude-ollama`, `earmark` and `lingveil` each clear the
+quarantine attribute from the app Homebrew just downloaded. Those apps are not
+notarised (the first two are ad-hoc signed, Lingveil carries a development
+signature), and macOS refuses to open a quarantined app that is not notarised,
+so without it every install would end with the user typing `xattr -dr` by hand. Nothing about the
 app's signing changes.
 
 The `google-tts-local` formula builds from source and ad-hoc signs the engine

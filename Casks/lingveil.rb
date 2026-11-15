@@ -26,9 +26,9 @@ cask "lingveil" do
   uninstall quit: "com.aadityavmore.lingveil"
 
   # Downloaded translation models and voices (these run to gigabytes), the voice
-  # plugin list, settings including any Google Cloud or DeepL key, download
-  # caches and crash reports. Not Google voices: those belong to the
-  # google-tts-local formula, which Earmark uses too.
+  # plugin registrations and list, settings including any Google Cloud or DeepL
+  # key, download caches and crash reports. A voice plugin's own files belong to
+  # whatever installed it.
   zap trash: [
     "~/Library/Application Support/CrashReporter/Lingveil_*.plist",
     "~/Library/Application Support/Lingveil",

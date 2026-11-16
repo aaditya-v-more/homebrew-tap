@@ -1,6 +1,6 @@
 cask "earmark" do
-  version "1.0.1"
-  sha256 "01d6868fb7d398d6338f47381485cdd5e6e2f6d05796c2acfec89f800033e367"
+  version "1.0.2"
+  sha256 "2adbb49b81ae4a937e36c0c9317008d164151d540ee6d8316d6d158f0a47da04"
 
   url "https://tinkerfold.com/download/earmark/#{version}/Earmark.zip"
   name "Earmark"

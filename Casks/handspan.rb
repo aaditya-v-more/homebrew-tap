@@ -4,7 +4,7 @@ cask "handspan" do
 
   url "https://tinkerfold.com/download/handspan/#{version}/Handspan-#{version}-mac.zip"
   name "Handspan"
-  desc "Uses this Mac's keyboard and mouse on other devices over Bluetooth"
+  desc "Uses one keyboard and mouse on other devices over Bluetooth"
   homepage "https://tinkerfold.com/handspan"
 
   depends_on macos: :ventura

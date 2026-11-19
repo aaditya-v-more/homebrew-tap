@@ -1,6 +1,6 @@
 cask "earmark" do
-  version "1.2.0"
-  sha256 "233bc756bdd76d7f96dc06d9b51e1c12a7c135b417c9686ee0accbbaf36335c6"
+  version "1.2.1"
+  sha256 "3ad4455c5ce6c8d73882e73d403a002c10a72412c6fec1009f62c951b060ed02"
 
   url "https://tinkerfold.com/download/earmark/#{version}/Earmark.zip"
   name "Earmark"
@@ -27,6 +27,7 @@ cask "earmark" do
     "~/Library/Caches/Earmark",
     "~/Library/Caches/com.aadityavmore.earmark",
     "~/Library/HTTPStorages/com.aadityavmore.earmark",
+    "~/Library/Logs/Earmark",
     "~/Library/Preferences/com.aadityavmore.earmark.plist",
     "~/Library/Saved Application State/com.aadityavmore.earmark.savedState",
     "~/Library/WebKit/com.aadityavmore.earmark",

@@ -22,6 +22,14 @@ Or name it inline and skip the tap step:
 Install the reader with `brew install --cask aaditya-v-more/tap/toldit`. Homebrew
 recognizes its former token, `earmark`. The current 1.2.0 release opens as Earmark.
 
+For the coordinated ToldIt release, update this cask from the final Mac archive and
+the release's `SHA256SUMS`. Set the version, use
+`https://tinkerfold.com/download/toldit/#{version}/ToldIt.zip`, and point the app and
+quarantine step at `ToldIt.app`. Use `https://tinkerfold.com/toldit` for the homepage.
+Retain the token migration and the data paths used by both versions. Verify a fresh
+install, an upgrade from the old token and an uninstall on a clean Mac before switching
+the tap over.
+
 Each entry is built from its own repository; this one holds only the formulae
 and casks. ToldIt and Lingveil are downloaded from tinkerfold.com. Anything
 about the packaging itself belongs here.

@@ -29,6 +29,7 @@ cask "toldit" do
     "~/Library/Caches/Earmark",
     "~/Library/Caches/com.aadityavmore.earmark",
     "~/Library/HTTPStorages/com.aadityavmore.earmark",
+    "~/Library/Logs/Earmark",
     "~/Library/Preferences/com.aadityavmore.earmark.plist",
     "~/Library/Saved Application State/com.aadityavmore.earmark.savedState",
     "~/Library/WebKit/com.aadityavmore.earmark",

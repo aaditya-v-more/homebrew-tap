@@ -35,7 +35,7 @@ class GoogleTtsLocal < Formula
       To run the HTTP server as a user LaunchAgent:
         gtts-service install
 
-      To add the voices to Earmark's voice menu:
+      To add the voices to ToldIt's voice menu (called Earmark in version 1.2.0):
         gtts-earmark install
 
       The engine helper is ad-hoc signed and is not notarized.

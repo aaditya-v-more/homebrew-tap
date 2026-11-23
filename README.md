@@ -15,12 +15,15 @@ Or name it inline and skip the tap step:
 | | |
 | --- | --- |
 | [claude-ollama](https://github.com/aaditya-v-more/claude-ollama) (cask) | Runs Claude Desktop against a local Ollama gateway — environment overrides for the retry, concurrency and context-window settings a small self-hosted endpoint needs, plus a pacing proxy that keeps in-flight requests under the gateway's limit. |
-| [earmark](https://tinkerfold.com/#earmark) (cask) | A small reader for EPUB, PDF and text that reads books aloud, highlighting the sentence and the word being spoken. Works with system voices and plugin TTS engines. |
+| [toldit](https://tinkerfold.com/#earmark) (cask) | A small reader for EPUB, PDF and text that reads books aloud, highlighting the sentence and the word being spoken. Works with system voices and plugin TTS engines. |
 | [google-tts-local](https://github.com/aaditya-v-more/google-tts-local) (formula) | Runs Google's on-device text-to-speech voices locally on Apple Silicon, with a CLI and optional HTTP server. |
 | [lingveil](https://tinkerfold.com/#lingveil) (cask) | Translates what's on screen in place: labels, messages and paragraphs are repainted in your language in the same spot, with the app's own colors and type. Uses Google with no key, local models or Apple's built-in translation. |
 
+Install the reader with `brew install --cask aaditya-v-more/tap/toldit`. Homebrew
+recognizes its former token, `earmark`. The current 1.2.0 release opens as Earmark.
+
 Each entry is built from its own repository; this one holds only the formulae
-and casks. Earmark and Lingveil are downloaded from tinkerfold.com. Anything
+and casks. ToldIt and Lingveil are downloaded from tinkerfold.com. Anything
 about the packaging itself belongs here.
 
 ## Trust
@@ -31,7 +34,7 @@ Homebrew tap. Answering once covers this tap by name, including anything added
 to it later; `brew trust --tap aaditya-v-more/tap` does the same up front.
 
 What runs at install time is visible in the files here. For the casks that is
-one line each: `claude-ollama`, `earmark` and `lingveil` each clear the
+one line each: `claude-ollama`, `toldit` and `lingveil` each clear the
 quarantine attribute from the app Homebrew just downloaded. Those apps are not
 notarised (the first two are ad-hoc signed, Lingveil carries a development
 signature), and macOS refuses to open a quarantined app that is not notarised,

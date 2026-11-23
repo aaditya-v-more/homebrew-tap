@@ -1,14 +1,16 @@
-cask "earmark" do
+cask "toldit" do
   version "1.2.0"
   sha256 "233bc756bdd76d7f96dc06d9b51e1c12a7c135b417c9686ee0accbbaf36335c6"
 
   url "https://tinkerfold.com/download/earmark/#{version}/Earmark.zip"
+  name "ToldIt"
   name "Earmark"
   desc "Reads EPUB, PDF and text books aloud, highlighting each sentence and word"
   homepage "https://tinkerfold.com/#earmark"
 
   depends_on macos: :sonoma
 
+  # The published 1.2.0 archive still contains the app under its original name.
   app "Earmark.app"
 
   # The app is ad-hoc signed rather than notarised, and macOS refuses a

@@ -15,23 +15,19 @@ Or name it inline and skip the tap step:
 | | |
 | --- | --- |
 | [claude-ollama](https://github.com/aaditya-v-more/claude-ollama) (cask) | Runs Claude Desktop against a local Ollama gateway — environment overrides for the retry, concurrency and context-window settings a small self-hosted endpoint needs, plus a pacing proxy that keeps in-flight requests under the gateway's limit. |
-| [toldit](https://tinkerfold.com/#earmark) (cask) | A small reader for EPUB, PDF and text that reads books aloud, highlighting the sentence and the word being spoken. Works with system voices and plugin TTS engines. |
+| [toldit](https://tinkerfold.com/toldit) (cask) | A small reader for EPUB, PDF and text that reads books aloud, highlighting the sentence and the word being spoken. Works with system voices and plugin TTS engines. |
 | [google-tts-local](https://github.com/aaditya-v-more/google-tts-local) (formula) | Runs Google's on-device text-to-speech voices locally on Apple Silicon, with a CLI and optional HTTP server. |
 | [lingveil](https://tinkerfold.com/#lingveil) (cask) | Translates what's on screen in place: labels, messages and paragraphs are repainted in your language in the same spot, with the app's own colors and type. Uses Google with no key, local models or Apple's built-in translation. |
 
 Install the reader with `brew install --cask aaditya-v-more/tap/toldit`. Homebrew
-recognizes its former token, `earmark`. The current 1.2.0 release opens as Earmark.
+recognizes its former token, `earmark`. This branch prepares the 2.0.0 cask.
 
-For the coordinated ToldIt 2.0.0 release, set the version, versioned URL and SHA-256
-together from the website handover. The URL for `ToldIt.zip` is
-`https://tinkerfold.com/download/toldit/2.0.0/ToldIt.zip`. Independently hash the exact
-Mac archive against the producer's `SHA256SUMS`, then confirm the pin against the
-staged feed and archive. Point the app and quarantine step at `ToldIt.app` and use
-`https://tinkerfold.com/toldit` for the homepage. Preserve the token migration,
-data paths and the pinned 1.2.0 archive at
-`https://tinkerfold.com/download/earmark/1.2.0/Earmark.zip`. Verify a fresh install,
+The cask pins the independently verified `ToldIt.zip` at
+`https://tinkerfold.com/download/toldit/2.0.0/ToldIt.zip`. Confirm its checksum
+against the preview archive and update feed. Verify a fresh install,
 an upgrade from the old token and an uninstall on a clean Mac using the preview
 URL and the same SHA-256. The release lead switches the public tap during cutover.
+The 1.2.0 archive stays at `https://tinkerfold.com/download/earmark/1.2.0/Earmark.zip`.
 
 Each entry is built from its own repository; this one holds only the formulae
 and casks. ToldIt and Lingveil are downloaded from tinkerfold.com. Anything

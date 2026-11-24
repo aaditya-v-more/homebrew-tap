@@ -1,24 +1,23 @@
 cask "toldit" do
-  version "1.2.0"
-  sha256 "233bc756bdd76d7f96dc06d9b51e1c12a7c135b417c9686ee0accbbaf36335c6"
+  version "2.0.0"
+  sha256 "e1ab7c52025fc064e39013cfb5ccb3e092095f5469cb42aa72f486c722cde39f"
 
-  url "https://tinkerfold.com/download/earmark/#{version}/Earmark.zip"
+  url "https://tinkerfold.com/download/toldit/#{version}/ToldIt.zip"
   name "ToldIt"
   name "Earmark"
   desc "Reads EPUB, PDF and text books aloud, highlighting each sentence and word"
-  homepage "https://tinkerfold.com/#earmark"
+  homepage "https://tinkerfold.com/toldit"
 
   depends_on macos: :sonoma
 
-  # The published 1.2.0 archive still contains the app under its original name.
-  app "Earmark.app"
+  app "ToldIt.app"
 
   # The app is ad-hoc signed rather than notarised, and macOS refuses a
   # quarantined app that is not notarised. Clearing the attribute Homebrew sets
   # on the download is what a user would otherwise type by hand.
   postflight_steps do
     run "/usr/bin/xattr",
-        args:         ["-dr", "com.apple.quarantine", "{{appdir}}/Earmark.app"],
+        args:         ["-dr", "com.apple.quarantine", "{{appdir}}/ToldIt.app"],
         must_succeed: false
   end
 

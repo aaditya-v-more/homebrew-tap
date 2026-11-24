@@ -21,9 +21,9 @@ cask "handspan" do
         must_succeed: false
   end
 
-  # It lives in the menu bar, so it is usually running; quitting it releases
-  # any keys held on a device and gives input back to this Mac.
-  uninstall quit: "com.tinkerfold.handspan"
+  # Handspan handles TERM like Quit Handspan, releasing held keys and closing device links.
+  uninstall signal:     [["TERM", "com.tinkerfold.handspan"]],
+            on_upgrade: :signal
 
   # Settings (devices, shortcuts, options), logs and crash reports.
   zap trash: [

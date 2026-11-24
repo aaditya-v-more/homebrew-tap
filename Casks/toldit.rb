@@ -1,6 +1,6 @@
 cask "toldit" do
-  version "2.1.0"
-  sha256 "3122cffab70b7a7f68a93a767cc18ff06dcda086dae564628b8542c4a2a3a156"
+  version "2.2.0"
+  sha256 "b4b66ea45d9b02493c571b9009e7f89b14774f56167d8d5bdefd17a214827cea"
 
   url "https://tinkerfold.com/download/toldit/#{version}/ToldIt.zip"
   name "ToldIt"

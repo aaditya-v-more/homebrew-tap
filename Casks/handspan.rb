@@ -1,6 +1,6 @@
 cask "handspan" do
-  version "0.1.2"
-  sha256 "1ec1df2325aa9ee896f4965362c55149b22d31f539bd5d7bf81516bd28f8cac2"
+  version "0.1.3"
+  sha256 "75fde83abd2d981e78ab3c1ec294a889449a01dfdad7d5134e50275aac7ca6d2"
 
   url "https://tinkerfold.com/download/handspan/#{version}/Handspan-#{version}-mac.zip"
   name "Handspan"

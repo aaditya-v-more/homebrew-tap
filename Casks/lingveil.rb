@@ -1,6 +1,6 @@
 cask "lingveil" do
-  version "0.2.6"
-  sha256 "ce15d4bb37d1ad703e9391d6aae0752b12206e2d35e0f02442603747725c4f22"
+  version "0.2.7"
+  sha256 "a736c9b081de56899835114329cff07e81404f0547b096e8a0fbd23cbd4cf49a"
 
   url "https://tinkerfold.com/download/lingveil/#{version}/Lingveil-#{version}-mac.zip"
   name "Lingveil"

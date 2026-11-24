@@ -21,7 +21,7 @@ cask "handspan" do
         must_succeed: false
   end
 
-  # A shell outside the GUI bootstrap domain cannot see the app via launchctl list.
+  # Finder can give the running app a UUID-suffixed launch label that Homebrew doesn't match.
   # TERM follows Handspan's normal quit path and releases held keys before removal.
   uninstall early_script: {
     executable: "/bin/sh",
